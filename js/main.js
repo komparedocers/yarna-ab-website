@@ -13,6 +13,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         initHeader();
         initMobileMenu();
+        initSlider();
         initScrollAnimations();
         initROICalculator();
         initStats();
@@ -75,6 +76,107 @@
                 }
             });
         });
+    }
+
+    // ========================================
+    // Hero Slider
+    // ========================================
+    function initSlider() {
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.slider-btn.prev');
+        const nextBtn = document.querySelector('.slider-btn.next');
+        const dotsContainer = document.querySelector('.slider-dots');
+
+        if (!slides.length) return;
+
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        // Create dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('slider-dot');
+            dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.slider-dot');
+
+        function goToSlide(n) {
+            // Remove active class from current slide and dot
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+
+            // Update current slide
+            currentSlide = (n + totalSlides) % totalSlides;
+
+            // Add active class to new slide and dot
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(currentSlide - 1);
+        }
+
+        // Event listeners
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+        // Auto-advance slider
+        let autoSlideInterval = setInterval(nextSlide, 5000);
+
+        // Pause auto-advance on hover
+        const sliderContainer = document.querySelector('.hero-slider');
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', () => {
+                clearInterval(autoSlideInterval);
+            });
+
+            sliderContainer.addEventListener('mouseleave', () => {
+                autoSlideInterval = setInterval(nextSlide, 5000);
+            });
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevSlide();
+            if (e.key === 'ArrowRight') nextSlide();
+        });
+
+        // Touch/swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        if (sliderContainer) {
+            sliderContainer.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            sliderContainer.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+        }
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        }
     }
 
     // ========================================
