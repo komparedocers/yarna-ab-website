@@ -242,7 +242,7 @@
     // Animated Statistics
     // ========================================
     function initStats() {
-        const statElements = document.querySelectorAll('.stat-number');
+        const statElements = document.querySelectorAll('.stat-number[data-target]');
 
         if (!statElements.length) return;
 
