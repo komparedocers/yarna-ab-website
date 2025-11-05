@@ -79,15 +79,13 @@
     }
 
     // ========================================
-    // Hero Slider
+    // Hero Stats Slider
     // ========================================
     function initSlider() {
-        const slides = document.querySelectorAll('.slide');
-        const prevBtn = document.querySelector('.slider-btn.prev');
-        const nextBtn = document.querySelector('.slider-btn.next');
+        const slides = document.querySelectorAll('.stat-slide');
         const dotsContainer = document.querySelector('.slider-dots');
 
-        if (!slides.length) return;
+        if (!slides.length || !dotsContainer) return;
 
         let currentSlide = 0;
         const totalSlides = slides.length;
@@ -125,15 +123,11 @@
             goToSlide(currentSlide - 1);
         }
 
-        // Event listeners
-        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-
         // Auto-advance slider
         let autoSlideInterval = setInterval(nextSlide, 5000);
 
         // Pause auto-advance on hover
-        const sliderContainer = document.querySelector('.hero-slider');
+        const sliderContainer = document.querySelector('.hero-stats-slider');
         if (sliderContainer) {
             sliderContainer.addEventListener('mouseenter', () => {
                 clearInterval(autoSlideInterval);
