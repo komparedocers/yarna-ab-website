@@ -3,160 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products - YARNA AB</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="description" content="YARNA AB Products - AI-powered solutions for automation and intelligence">
+    <title>Our Products | YARNA AB - Intelligence in every Automation™</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <!-- Header -->
-    <header class="p-3 bg-white fixed-top header-light">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none logo-link">
-            <span class="logo-wordmark">YARNA AB</span>
-          </a>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M16 2L4 8v8c0 7.5 5.2 14.5 12 16 6.8-1.5 12-8.5 12-16V8L16 2zm0 2.5l10 5v6.5c0 6.5-4.5 12.5-10 14-5.5-1.5-10-7.5-10-14V9.5l10-5zM16 8l-6 4v4c0 3.3 2.7 6 6 6s6-2.7 6-6v-4l-6-4z"/>
+                    </svg>
+                </div>
+                YARNA AB
+            </a>
 
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="index.html" class="nav-link px-2">Home</a></li>
-            <li><a href="about.html" class="nav-link px-2">About</a></li>
-            <li><a href="products.html" class="nav-link px-2 active-link">Products</a></li>
-            <li><a href="industries.html" class="nav-link px-2">Industries</a></li>
-            <li><a href="investors.html" class="nav-link px-2">Investors</a></li>
-          </ul>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-          <div class="text-end">
-            <a href="contact.html" class="btn btn-outline-light me-2">Contact Us</a>
-          </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link active">Products</a></li>
+                    <li><a href="industries.html" class="nav-link">Industries</a></li>
+                    <li><a href="investors.html" class="nav-link">Investors</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </nav>
         </div>
-      </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Page Header -->
-        <section class="hero text-center">
-            <div id="particles-js"></div>
-            <div class="container">
-                <div data-aos="fade-up">
-                    <h1 class="display-4 fw-bold">Our AI-Powered Products</h1>
-                    <p class="lead my-4">Innovative solutions designed to drive efficiency, insight, and growth.</p>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Our AI-Powered Products</h1>
+                <p class="tagline">Intelligence in every Automation™</p>
+                <p class="lead">Innovative autonomous solutions designed to drive efficiency, insight, and growth across your entire organization.</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Products Section -->
-        <section class="py-5">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-12" data-aos="fade-up">
-                        <div class="product-card">
-                            <div class="icon"><i class="bi bi-files"></i></div>
-                            <div>
-                                <h3>Komparedocs</h3>
-                                <p class="text-secondary">An AI-powered tool for intelligent document comparison and analysis. Komparedocs goes beyond simple text matching, understanding context and semantics to provide unparalleled accuracy in identifying meaningful differences in legal, financial, and technical documents.</p>
-                                <a href="contact.html" class="btn btn-primary">Request a Demo</a>
-                            </div>
+    <!-- Products Section -->
+    <section class="bg-white">
+        <div class="container">
+            <div class="grid grid-1 scroll-animate" style="gap: var(--space-3xl);">
+                <div class="feature-card">
+                    <div class="comparison-grid" style="align-items: flex-start;">
+                        <div class="card-icon" style="width: 80px; height: 80px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="9" y1="15" x2="15" y2="15"/>
+                                <line x1="9" y1="11" x2="15" y2="11"/>
+                            </svg>
                         </div>
-                    </div>
-                    <div class="col-12" data-aos="fade-up" data-aos-delay="100">
-                        <div class="product-card">
-                            <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
-                            <div>
-                                <h3>InsightStream</h3>
-                                <p class="text-secondary">Real-time data analytics platform that turns your data firehose into a stream of actionable insights. Monitor KPIs, detect anomalies, and predict trends with a powerful, intuitive dashboard.</p>
-                                <a href="contact.html" class="btn btn-outline-light">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12" data-aos="fade-up" data-aos-delay="200">
-                        <div class="product-card">
-                            <div class="icon"><i class="bi bi-robot"></i></div>
-                            <div>
-                                <h3>AutomateR</h3>
-                                <p class="text-secondary">A no-code platform for building and deploying enterprise-grade automation workflows. Connect your apps, automate repetitive tasks, and free up your team to focus on what matters most.</p>
-                                <a href="contact.html" class="btn btn-outline-light">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- AI Impact Section -->
-        <section class="py-5 ai-impact-section">
-            <div class="container">
-                <h2 class="text-center mb-5">Proven Results with Our Products</h2>
-                <div class="row text-center">
-                    <div class="col-md-4" data-aos="fade-up">
-                        <div class="stat-item">
-                            <h3 class="stat-number" data-target="95" data-suffix="%">0%</h3>
-                            <p class="stat-text">Accuracy in Document Anomaly Detection</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="stat-item">
-                            <h3 class="stat-number" data-target="50" data-suffix="%">0%</h3>
-                            <p class="stat-text">Faster Insights from Real-Time Data</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="stat-item">
-                            <h3 class="stat-number" data-target="80" data-suffix="%">0%</h3>
-                            <p class="stat-text">Reduction in Repetitive Manual Tasks</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="py-5 light-section">
-            <div class="container">
-                <div class="ai-comparison-section" data-aos="fade-up">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-lg-5 ai-comparison-copy">
-                            <h2>Product Outcomes With Intelligent Automation</h2>
-                            <p>YARNA products combine secure data foundations with adaptive learning loops that keep workflows responsive and resilient.</p>
+                        <div>
+                            <h2>Komparedocs</h2>
+                            <p>An AI-powered tool for intelligent document comparison and analysis. Komparedocs goes beyond simple text matching, understanding context and semantics to provide unparalleled accuracy in identifying meaningful differences in legal, financial, and technical documents.</p>
                             <ul class="comparison-list">
-                                <li><strong>Legacy comparison tools</strong><span>42 hrs review window</span></li>
-                                <li><strong>KompareDocs automation</strong><span>9 hrs review window</span></li>
-                                <li><strong>Update cadence</strong><span>↑ 4x releases</span></li>
+                                <li><strong>Context-aware analysis</strong> <span>AI understanding</span></li>
+                                <li><strong>Multi-format support</strong> <span>PDF, DOCX, TXT</span></li>
+                                <li><strong>Real-time processing</strong> <span>Instant results</span></li>
                             </ul>
+                            <a href="contact.html" class="btn btn-primary mt-4">Request a Demo</a>
                         </div>
-                        <div class="col-lg-7">
-                            <div class="comparison-visual">
-                                <div class="metric-track">
-                                    <div class="metric-heading"><span>Manual reviews</span><span>42 hrs</span></div>
-                                    <div class="comparison-bar" style="--target:0.40;"><span></span></div>
-                                </div>
-                                <div class="metric-track">
-                                    <div class="metric-heading"><span>AI triage</span><span>9 hrs</span></div>
-                                    <div class="comparison-bar" style="--target:0.88;"><span></span></div>
-                                </div>
-                                <div class="metric-track">
-                                    <div class="metric-heading"><span>Customer change requests</span><span>-63%</span></div>
-                                    <div class="comparison-bar" style="--target:0.67;"><span></span></div>
-                                </div>
-                                <div class="comparison-delta">Our automation suite sustains responsive shipping cycles with fewer escalations.</div>
-                            </div>
+                    </div>
+                </div>
+
+                <div class="feature-card scroll-animate">
+                    <div class="comparison-grid" style="align-items: flex-start;">
+                        <div class="card-icon" style="width: 80px; height: 80px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                                <polyline points="17 6 23 6 23 12"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h2>InsightStream</h2>
+                            <p>Real-time data analytics platform that turns your data firehose into a stream of actionable insights. Monitor KPIs, detect anomalies, and predict trends with a powerful, intuitive dashboard that scales with your business.</p>
+                            <ul class="comparison-list">
+                                <li><strong>Real-time analytics</strong> <span>Live data processing</span></li>
+                                <li><strong>Predictive modeling</strong> <span>ML-powered forecasts</span></li>
+                                <li><strong>Custom dashboards</strong> <span>Tailored views</span></li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-outline mt-4">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card scroll-animate">
+                    <div class="comparison-grid" style="align-items: flex-start;">
+                        <div class="card-icon" style="width: 80px; height: 80px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="10" rx="2"/>
+                                <circle cx="12" cy="5" r="2"/>
+                                <path d="M12 7v4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h2>AutomateR</h2>
+                            <p>A no-code platform for building and deploying enterprise-grade automation workflows. Connect your apps, automate repetitive tasks, and free up your team to focus on what matters most with our intuitive visual workflow builder.</p>
+                            <ul class="comparison-list">
+                                <li><strong>No-code builder</strong> <span>Visual interface</span></li>
+                                <li><strong>500+ integrations</strong> <span>Connect anything</span></li>
+                                <li><strong>Enterprise security</strong> <span>SOC 2 compliant</span></li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-outline mt-4">Learn More</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <!-- Impact Statistics -->
+    <section class="bg-alt">
+        <div class="container">
+            <h2 class="section-title">Proven Results with Our Products</h2>
+            <div class="stats">
+                <div class="stat-item scroll-animate">
+                    <span class="stat-number" data-target="95" data-suffix="%">0%</span>
+                    <p class="stat-label">Accuracy in Document<br>Anomaly Detection</p>
+                </div>
+                <div class="stat-item scroll-animate">
+                    <span class="stat-number" data-target="50" data-suffix="%">0%</span>
+                    <p class="stat-label">Faster Insights from<br>Real-Time Data</p>
+                </div>
+                <div class="stat-item scroll-animate">
+                    <span class="stat-number" data-target="80" data-suffix="%">0%</span>
+                    <p class="stat-label">Reduction in Repetitive<br>Manual Tasks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="bg-white">
+        <div class="container">
+            <div class="comparison-section scroll-animate">
+                <div class="comparison-grid">
+                    <div>
+                        <h2>Product Outcomes With Intelligent Automation</h2>
+                        <p>YARNA products combine secure data foundations with adaptive learning loops that keep workflows responsive and resilient.</p>
+                        <ul class="comparison-list">
+                            <li><strong>Legacy comparison tools</strong> <span>42 hrs review window</span></li>
+                            <li><strong>Komparedocs automation</strong> <span>9 hrs review window</span></li>
+                            <li><strong>Update cadence</strong> <span>↑ 4x releases</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="metric-bar">
+                            <div class="metric-label">
+                                <strong>Manual reviews</strong>
+                                <span>42 hrs</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" data-width="40%"></div>
+                            </div>
+                        </div>
+                        <div class="metric-bar">
+                            <div class="metric-label">
+                                <strong>AI triage</strong>
+                                <span>9 hrs</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="metric-bar">
+                            <div class="metric-label">
+                                <strong>Customer change requests</strong>
+                                <span>-63%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" data-width="67%"></div>
+                            </div>
+                        </div>
+                        <div class="comparison-note">
+                            Our automation suite sustains responsive shipping cycles with fewer escalations.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="footer-heading">Company</h5>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h5>Company</h5>
                     <ul class="footer-links">
                         <li><a href="about.html">About</a></li>
                         <li><a href="about.html">Culture & Team</a></li>
@@ -164,16 +209,26 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="footer-heading">Solutions</h5>
+                <div class="footer-section">
+                    <h5>Solutions</h5>
                     <ul class="footer-links">
-                        <li><a href="products.html">KompareDocs</a></li>
-                        <li><a href="products.html">Automation Platform</a></li>
+                        <li><a href="products.html">Komparedocs</a></li>
+                        <li><a href="products.html">InsightStream</a></li>
+                        <li><a href="products.html">AutomateR Platform</a></li>
                         <li><a href="industries.html">Advisory & Enablement</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="footer-heading">Resources</h5>
+                <div class="footer-section">
+                    <h5>Industries</h5>
+                    <ul class="footer-links">
+                        <li><a href="industries.html">Automotive</a></li>
+                        <li><a href="industries.html">Healthcare</a></li>
+                        <li><a href="industries.html">Finance</a></li>
+                        <li><a href="industries.html">Logistics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Resources</h5>
                     <ul class="footer-links">
                         <li><a href="privacy.html">Privacy Policy</a></li>
                         <li><a href="terms.html">Terms & Conditions</a></li>
@@ -181,15 +236,13 @@
                     </ul>
                 </div>
             </div>
-            <hr class="my-4" style="border-color: var(--border-color);">
-            <p class="text-center text-secondary">&copy; 2025 YARNA AB. All Rights Reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 YARNA AB. All Rights Reserved. Intelligence in every Automation™</p>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/icons.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
