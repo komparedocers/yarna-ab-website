@@ -146,6 +146,7 @@ a:hover {
 
 .ticker {
     display: flex;
+    align-items: center;
     white-space: nowrap;
     animation: ticker-scroll 40s linear infinite;
 }
