@@ -142,6 +142,8 @@ a:hover {
     overflow: hidden;
     position: relative;
     margin-top: 70px;
+    display: flex;
+    align-items: center;
 }
 
 .ticker {
