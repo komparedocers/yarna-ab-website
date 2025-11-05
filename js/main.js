@@ -1,120 +1,391 @@
-document.addEventListener('DOMContentLoaded', function () {
+/* ========================================
+   YARNA AB - Main JavaScript
+   Autonomous Software Systems
+   Intelligence in every Automation™
+   ======================================== */
 
-    // Initialize AOS (Animate on Scroll)
-    AOS.init({
-        duration: 800,
-        once: true,
+(function() {
+    'use strict';
+
+    // ========================================
+    // Initialize on DOM Ready
+    // ========================================
+    document.addEventListener('DOMContentLoaded', function() {
+        initHeader();
+        initMobileMenu();
+        initScrollAnimations();
+        initROICalculator();
+        initStats();
+        initComparisonBars();
+        initParticles();
+        initContactForm();
     });
 
-    // Initialize Product Swiper
-    const productSwiperEl = document.querySelector('.product-swiper');
-    if (productSwiperEl) {
-        const slideCount = productSwiperEl.querySelectorAll('.swiper-slide').length;
-        const loopEnabled = slideCount > 3;
+    // ========================================
+    // Header Scroll Effect
+    // ========================================
+    function initHeader() {
+        const header = document.querySelector('header');
+        if (!header) return;
 
-        new Swiper('.product-swiper', {
-            loop: loopEnabled,
-            slidesPerView: 1,
-            spaceBetween: 30,
-            autoplay: loopEnabled ? { delay: 5000, disableOnInteraction: false } : false,
-            pagination: { el: '.swiper-pagination', clickable: true },
-            breakpoints: {
-                768: { slidesPerView: Math.min(2, slideCount), spaceBetween: 40 },
-                992: { slidesPerView: Math.min(3, slideCount), spaceBetween: 50 },
-            },
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
     }
 
-    // Particles.js configuration
-    if (document.getElementById('particles-js')) {
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {"value": 80, "density": {"enable": true, "value_area": 800}},
-                "color": {"value": "#2b6cb0"},
-                "shape": {"type": "circle"},
-                "opacity": {"value": 0.5, "random": false},
-                "size": {"value": 3, "random": true},
-                "line_linked": {"enable": true, "distance": 150, "color": "#2b6cb0", "opacity": 0.4, "width": 1},
-                "move": {"enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out"}
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {"onhover": {"enable": true, "mode": "repulse"}, "onclick": {"enable": true, "mode": "push"}},
-                "modes": {"repulse": {"distance": 100}, "push": {"particles_nb": 4}}
-            },
-            "retina_detect": true
+    // ========================================
+    // Mobile Menu
+    // ========================================
+    function initMobileMenu() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+
+        if (!menuToggle || !nav) return;
+
+        menuToggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+
+            // Animate hamburger to X
+            const spans = menuToggle.querySelectorAll('span');
+            if (nav.classList.contains('active')) {
+                spans[0].style.transform = 'rotate(45deg) translateY(7px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translateY(-7px)';
+            } else {
+                spans[0].style.transform = '';
+                spans[1].style.opacity = '';
+                spans[2].style.transform = '';
+            }
+        });
+
+        // Close menu when clicking on a link
+        const navLinks = nav.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    nav.classList.remove('active');
+                    const spans = menuToggle.querySelectorAll('span');
+                    spans[0].style.transform = '';
+                    spans[1].style.opacity = '';
+                    spans[2].style.transform = '';
+                }
+            });
         });
     }
 
-    // ROI Calculator Logic
-    const employeesSlider = document.getElementById('employees');
-    const hoursSlider = document.getElementById('hours');
-    const costSlider = document.getElementById('cost');
+    // ========================================
+    // Scroll Animations
+    // ========================================
+    function initScrollAnimations() {
+        const animatedElements = document.querySelectorAll('.scroll-animate');
 
-    const employeesValue = document.getElementById('employees-value');
-    const hoursValue = document.getElementById('hours-value');
-    const costValue = document.getElementById('cost-value');
-    const savingsDisplay = document.getElementById('savings-display');
+        if (!animatedElements.length) return;
 
-    function calculateSavings() {
-        if (!employeesSlider) return; // Don't run on pages without the calculator
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            },
+            {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            }
+        );
 
-        const employees = parseInt(employeesSlider.value);
-        const hours = parseInt(hoursSlider.value);
-        const cost = parseInt(costSlider.value);
-
-        employeesValue.textContent = employees;
-        hoursValue.textContent = hours;
-        costValue.textContent = `$${cost}`;
-
-        const weeklyCost = employees * hours * cost;
-        const estimatedSavings = weeklyCost * 0.80; // Assuming 80% efficiency gain
-        const annualSavings = estimatedSavings * 52;
-
-        savingsDisplay.textContent = `$${Math.round(annualSavings).toLocaleString()}`;
+        animatedElements.forEach(el => observer.observe(el));
     }
 
-    if (employeesSlider) {
+    // ========================================
+    // ROI Calculator
+    // ========================================
+    function initROICalculator() {
+        const employeesSlider = document.getElementById('employees');
+        const hoursSlider = document.getElementById('hours');
+        const costSlider = document.getElementById('cost');
+
+        if (!employeesSlider) return; // Not on a page with calculator
+
+        const employeesValue = document.getElementById('employees-value');
+        const hoursValue = document.getElementById('hours-value');
+        const costValue = document.getElementById('cost-value');
+        const savingsDisplay = document.getElementById('savings-display');
+
+        function calculateSavings() {
+            const employees = parseInt(employeesSlider.value);
+            const hours = parseInt(hoursSlider.value);
+            const cost = parseInt(costSlider.value);
+
+            employeesValue.textContent = employees;
+            hoursValue.textContent = hours;
+            costValue.textContent = `$${cost}`;
+
+            const weeklyCost = employees * hours * cost;
+            const estimatedSavings = weeklyCost * 0.80; // 80% efficiency gain
+            const annualSavings = estimatedSavings * 52;
+
+            animateValue(savingsDisplay, 0, Math.round(annualSavings), 1000);
+        }
+
+        // Add event listeners
         [employeesSlider, hoursSlider, costSlider].forEach(slider => {
             slider.addEventListener('input', calculateSavings);
         });
+
         // Initial calculation
         calculateSavings();
     }
 
-    // Animated Stats Logic
-    function animateStats() {
-        const counters = document.querySelectorAll('.stat-number');
-        const speed = 200; // Lower is faster
+    // ========================================
+    // Animated Statistics
+    // ========================================
+    function initStats() {
+        const statElements = document.querySelectorAll('.stat-number');
 
-        counters.forEach(counter => {
-            const updateCount = () => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText.replace(/\D/g, '');
-                const increment = target / speed;
+        if (!statElements.length) return;
 
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment).toLocaleString();
-                    setTimeout(updateCount, 1);
-                } else {
-                    counter.innerText = target.toLocaleString() + (counter.getAttribute('data-suffix') || '');
-                }
-            };
-            updateCount();
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = parseFloat(entry.target.getAttribute('data-target'));
+                        const suffix = entry.target.getAttribute('data-suffix') || '';
+                        animateValue(entry.target, 0, target, 2000, suffix);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        statElements.forEach(el => observer.observe(el));
+    }
+
+    // ========================================
+    // Comparison Bar Animations
+    // ========================================
+    function initComparisonBars() {
+        const bars = document.querySelectorAll('.bar-fill');
+
+        if (!bars.length) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const width = entry.target.getAttribute('data-width');
+                        entry.target.style.width = width;
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.5 }
+        );
+
+        bars.forEach(bar => {
+            bar.style.width = '0%';
+            observer.observe(bar);
         });
     }
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateStats();
-                observer.unobserve(entry.target);
+    // ========================================
+    // Animated Particles Background
+    // ========================================
+    function initParticles() {
+        const particlesContainer = document.querySelector('.particles');
+
+        if (!particlesContainer) return;
+
+        const particleCount = 30;
+        const colors = ['rgba(59, 130, 246, 0.3)', 'rgba(96, 165, 250, 0.3)', 'rgba(37, 99, 235, 0.3)'];
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+
+            // Random size
+            const size = Math.random() * 6 + 2;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+
+            // Random position
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.top = `${Math.random() * 100}%`;
+
+            // Random color
+            particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+            // Random animation duration
+            particle.style.animationDuration = `${Math.random() * 20 + 10}s`;
+            particle.style.animationDelay = `${Math.random() * 5}s`;
+
+            particlesContainer.appendChild(particle);
+        }
+    }
+
+    // ========================================
+    // Contact Form Handling
+    // ========================================
+    function initContactForm() {
+        const form = document.querySelector('form');
+
+        if (!form) return;
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            // Show success message (in a real app, this would submit to a server)
+            alert('Thank you for your message! We will get back to you shortly.');
+            form.reset();
+        });
+
+        // Add real-time validation
+        const inputs = form.querySelectorAll('.form-input, .form-textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                validateInput(this);
+            });
+        });
+    }
+
+    // ========================================
+    // Helper Functions
+    // ========================================
+
+    function animateValue(element, start, end, duration, suffix = '') {
+        const range = end - start;
+        const increment = range / (duration / 16); // 60 FPS
+        let current = start;
+
+        const timer = setInterval(() => {
+            current += increment;
+            if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+                current = end;
+                clearInterval(timer);
+            }
+
+            // Format number with commas
+            const formatted = Math.round(current).toLocaleString();
+            element.textContent = `${suffix === '$' ? '$' : ''}${formatted}${suffix !== '$' ? suffix : ''}`;
+        }, 16);
+    }
+
+    function validateInput(input) {
+        const value = input.value.trim();
+        const type = input.type;
+
+        let isValid = true;
+
+        if (input.required && !value) {
+            isValid = false;
+        } else if (type === 'email' && value) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            isValid = emailRegex.test(value);
+        }
+
+        if (isValid) {
+            input.style.borderColor = '';
+        } else {
+            input.style.borderColor = '#ef4444';
+        }
+
+        return isValid;
+    }
+
+    // ========================================
+    // Smooth Scroll for Anchor Links
+    // ========================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
             }
         });
-    }, { threshold: 0.5 });
+    });
 
-    const statsSection = document.querySelector('.ai-impact-section');
-    if (statsSection) {
-        observer.observe(statsSection);
+    // ========================================
+    // Lazy Load Images (if any)
+    // ========================================
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                    }
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+        });
     }
-});
+
+    // ========================================
+    // Active Navigation Link Highlighting
+    // ========================================
+    function updateActiveNavLink() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
+
+    updateActiveNavLink();
+
+    // ========================================
+    // Performance: Debounce Function
+    // ========================================
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
+    // Optimize scroll events
+    const optimizedScroll = debounce(function() {
+        // Any scroll-heavy operations can go here
+    }, 100);
+
+    window.addEventListener('scroll', optimizedScroll);
+
+})();

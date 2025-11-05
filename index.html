@@ -3,201 +3,310 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YARNA AB - Artificial Intelligence Solutions</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="description" content="YARNA AB - Leading autonomous software systems company. Intelligence in every Automation™">
+    <title>YARNA AB - Autonomous Software Systems | Intelligence in every Automation™</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <!-- Header -->
-    <header class="p-3 bg-white fixed-top header-light">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none logo-link">
-            <span class="logo-wordmark">YARNA AB</span>
-          </a>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M16 2L4 8v8c0 7.5 5.2 14.5 12 16 6.8-1.5 12-8.5 12-16V8L16 2zm0 2.5l10 5v6.5c0 6.5-4.5 12.5-10 14-5.5-1.5-10-7.5-10-14V9.5l10-5zM16 8l-6 4v4c0 3.3 2.7 6 6 6s6-2.7 6-6v-4l-6-4z"/>
+                    </svg>
+                </div>
+                YARNA AB
+            </a>
 
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="index.html" class="nav-link px-2 active-link">Home</a></li>
-            <li><a href="about.html" class="nav-link px-2">About</a></li>
-            <li><a href="products.html" class="nav-link px-2">Products</a></li>
-            <li><a href="industries.html" class="nav-link px-2">Industries</a></li>
-            <li><a href="investors.html" class="nav-link px-2">Investors</a></li>
-          </ul>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-          <div class="text-end">
-            <a href="contact.html" class="btn btn-outline-light me-2">Contact Us</a>
-          </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="industries.html" class="nav-link">Industries</a></li>
+                    <li><a href="investors.html" class="nav-link">Investors</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </nav>
         </div>
-      </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero text-center">
-            <div id="particles-js"></div>
-            <div class="container">
-                <div data-aos="fade-up">
-                    <h1 class="display-3 fw-bold">Engineering the Future, Intelligently</h1>
-                    <p class="lead my-4">We build cutting-edge AI products that solve complex business problems through automation and data-driven insights.</p>
+    <!-- Ticker -->
+    <div class="ticker-wrapper">
+        <div class="ticker">
+            <span class="ticker-item">95% Accuracy in AI Document Analysis</span>
+            <span class="ticker-item">40% Average Increase in Operational Efficiency</span>
+            <span class="ticker-item">80% Reduction in Manual Tasks</span>
+            <span class="ticker-item">Industry-Leading Autonomous Software Systems</span>
+            <span class="ticker-item">Trusted by Fortune 500 Companies</span>
+            <span class="ticker-item">Real-Time AI Processing & Analytics</span>
+            <!-- Duplicate for seamless loop -->
+            <span class="ticker-item">95% Accuracy in AI Document Analysis</span>
+            <span class="ticker-item">40% Average Increase in Operational Efficiency</span>
+            <span class="ticker-item">80% Reduction in Manual Tasks</span>
+            <span class="ticker-item">Industry-Leading Autonomous Software Systems</span>
+            <span class="ticker-item">Trusted by Fortune 500 Companies</span>
+            <span class="ticker-item">Real-Time AI Processing & Analytics</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Autonomous Software Systems for the Modern Enterprise</h1>
+                <p class="tagline">Intelligence in every Automation™</p>
+                <p class="lead">We build cutting-edge AI products that solve complex business problems through automation and data-driven insights. Transform your operations with autonomous systems that learn, adapt, and deliver results.</p>
+                <div class="hero-actions">
                     <a href="about.html" class="btn btn-primary btn-lg">Discover Our Advantage</a>
+                    <a href="contact.html" class="btn btn-outline btn-lg">Get Started</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Services Section -->
-        <section class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-5">Our Expertise</h2>
-                <div class="row g-4">
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="product-card h-100">
-                            <div class="icon"><i class="bi bi-cpu"></i></div>
-                            <div>
-                                <h5>AI & Machine Learning</h5>
-                                <p class="text-secondary mb-0">Developing intelligent systems that learn and adapt to your business needs.</p>
-                            </div>
-                        </div>
+    <!-- Expertise Section -->
+    <section class="bg-white">
+        <div class="container">
+            <h2 class="section-title">Our Expertise</h2>
+            <p class="section-subtitle">Delivering autonomous solutions that drive efficiency, insight, and growth across your entire organization.</p>
+
+            <div class="grid grid-3">
+                <div class="card scroll-animate">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="4" y="4" width="16" height="16" rx="2"/>
+                            <rect x="9" y="9" width="6" height="6"/>
+                            <line x1="9" y1="1" x2="9" y2="4"/>
+                            <line x1="15" y1="1" x2="15" y2="4"/>
+                            <line x1="9" y1="20" x2="9" y2="23"/>
+                            <line x1="15" y1="20" x2="15" y2="23"/>
+                        </svg>
                     </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="product-card h-100">
-                            <div class="icon"><i class="bi bi-gear-wide-connected"></i></div>
-                            <div>
-                                <h5>Process Automation</h5>
-                                <p class="text-secondary mb-0">Streamlining your operations with smart automation solutions.</p>
-                            </div>
-                        </div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Developing intelligent systems that learn and adapt to your business needs, automating complex decision-making processes with unparalleled accuracy.</p>
+                </div>
+
+                <div class="card scroll-animate">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24m0-14.48l-4.24 4.24M9.88 14.12L5.64 18.36M1 12h6m6 0h6"/>
+                        </svg>
                     </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="product-card h-100">
-                            <div class="icon"><i class="bi bi-bar-chart-line"></i></div>
-                            <div>
-                                <h5>Data Analytics</h5>
-                                <p class="text-secondary mb-0">Turning your data into actionable insights for better decision-making.</p>
-                            </div>
-                        </div>
+                    <h3>Process Automation</h3>
+                    <p>Streamlining your operations with smart automation solutions that eliminate repetitive tasks and free your team to focus on strategic initiatives.</p>
+                </div>
+
+                <div class="card scroll-animate">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 3v18h18"/>
+                            <path d="M18 17V9"/>
+                            <path d="M13 17V5"/>
+                            <path d="M8 17v-3"/>
+                        </svg>
                     </div>
+                    <h3>Data Analytics</h3>
+                    <p>Turning your data into actionable insights with real-time analytics platforms that enable better, faster decision-making across your organization.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- AI ROI Calculator -->
-        <section class="py-5 bg-light">
-            <div class="container">
-                <div class="roi-calculator p-5" data-aos="fade-up">
-                    <h2 class="text-center mb-4">Calculate Your AI Advantage</h2>
-                    <p class="text-center text-secondary mb-5">See the tangible impact of AI-driven automation. Adjust the sliders to estimate your potential savings.</p>
-                    <div class="row align-items-center">
-                        <div class="col-lg-7">
-                            <div class="mb-4">
-                                <label for="employees" class="form-label">Number of Employees on Repetitive Tasks: <span id="employees-value" class="range-value">10</span></label>
-                                <input type="range" class="form-range" id="employees" min="1" max="100" value="10">
+    <!-- ROI Calculator Section -->
+    <section class="bg-alt">
+        <div class="container">
+            <div class="comparison-section scroll-animate">
+                <h2 class="text-center mb-4">Calculate Your AI Advantage</h2>
+                <p class="text-center mb-5">See the tangible impact of AI-driven automation. Adjust the sliders to estimate your potential savings.</p>
+
+                <div class="comparison-grid">
+                    <div>
+                        <div class="range-group">
+                            <div class="range-label">
+                                <span>Number of Employees on Repetitive Tasks</span>
+                                <span class="range-value" id="employees-value">10</span>
                             </div>
-                            <div class="mb-4">
-                                <label for="hours" class="form-label">Hours/Week Spent per Employee: <span id="hours-value" class="range-value">8</span></label>
-                                <input type="range" class="form-range" id="hours" min="1" max="40" value="8">
-                            </div>
-                            <div class="mb-4">
-                                <label for="cost" class="form-label">Average Hourly Cost ($): <span id="cost-value" class="range-value">30</span></label>
-                                <input type="range" class="form-range" id="cost" min="10" max="200" value="30">
-                            </div>
+                            <input type="range" class="range-input" id="employees" min="1" max="100" value="10">
                         </div>
-                        <div class="col-lg-5">
-                            <p class="text-center text-secondary mb-2">Estimated Annual Savings</p>
-                            <div id="savings-display">$0</div>
+
+                        <div class="range-group">
+                            <div class="range-label">
+                                <span>Hours/Week Spent per Employee</span>
+                                <span class="range-value" id="hours-value">8</span>
+                            </div>
+                            <input type="range" class="range-input" id="hours" min="1" max="40" value="8">
+                        </div>
+
+                        <div class="range-group">
+                            <div class="range-label">
+                                <span>Average Hourly Cost</span>
+                                <span class="range-value" id="cost-value">$30</span>
+                            </div>
+                            <input type="range" class="range-input" id="cost" min="10" max="200" value="30">
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Products Slider -->
-        <section class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-5">Our Products</h2>
-                <div class="swiper product-swiper" data-aos="fade-up">
-                    <div class="swiper-wrapper pb-5">
-                        <div class="swiper-slide">
-                            <div class="product-card h-100">
-                                <div class="icon"><i class="bi bi-files"></i></div>
-                                <div>
-                                    <h5>Komparedocs</h5>
-                                    <p class="text-secondary mb-0">AI-powered tool for intelligent document comparison.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-card h-100">
-                                <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
-                                <div>
-                                    <h5>InsightStream</h5>
-                                    <p class="text-secondary mb-0">Real-time data analytics platform for enterprise.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-card h-100">
-                                <div class="icon"><i class="bi bi-robot"></i></div>
-                                <div>
-                                    <h5>AutomateR</h5>
-                                    <p class="text-secondary mb-0">No-code platform for building automation workflows.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="py-5 light-section">
-            <div class="container">
-                <div class="ai-comparison-section" data-aos="fade-up">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-lg-5 ai-comparison-copy">
-                            <h2>Comparative Impact of AI Acceleration</h2>
-                            <p>See how augmenting core operations with machine intelligence streamlines throughput, boosts accuracy, and frees teams to focus on strategy instead of repetitive tasks.</p>
-                            <ul class="comparison-list">
-                                <li><strong>Manual process</strong><span>72 hrs per roll-out</span></li>
-                                <li><strong>AI-assisted orchestration</strong><span>18 hrs per roll-out</span></li>
-                                <li><strong>Quality drift</strong><span>↓ 68% incidents</span></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="comparison-visual">
-                                <div class="metric-track">
-                                    <div class="metric-heading"><span>Manual workflow</span><span>72 hrs</span></div>
-                                    <div class="comparison-bar" style="--target:0.45;"><span></span></div>
-                                </div>
-                                <div class="metric-track">
-                                    <div class="metric-heading"><span>AI-orchestrated delivery</span><span>18 hrs</span></div>
-                                    <div class="comparison-bar" style="--target:0.82;"><span></span></div>
-                                </div>
-                                <div class="metric-track">
-                                    <div class="metric-heading"><span>Rework cycles</span><span>3 iterations</span></div>
-                                    <div class="comparison-bar" style="--target:0.58;"><span></span></div>
-                                </div>
-                                <div class="comparison-delta">AI acceleration trims delivery cycles by up to 75% while sustaining quality.</div>
-                            </div>
-                        </div>
+                    <div class="calculator-display">
+                        <div class="calculator-label">Estimated Annual Savings</div>
+                        <div class="calculator-value" id="savings-display">$0</div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <!-- Products Section -->
+    <section class="bg-white">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <p class="section-subtitle">Industry-leading autonomous solutions designed to transform your business operations.</p>
+
+            <div class="grid grid-3">
+                <div class="feature-card scroll-animate">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="9" y1="15" x2="15" y2="15"/>
+                            <line x1="9" y1="11" x2="15" y2="11"/>
+                        </svg>
+                    </div>
+                    <h3>Komparedocs</h3>
+                    <p>AI-powered tool for intelligent document comparison and analysis. Goes beyond text matching to understand context and semantics.</p>
+                    <a href="products.html" class="btn btn-outline mt-3">Learn More</a>
+                </div>
+
+                <div class="feature-card scroll-animate">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                            <polyline points="17 6 23 6 23 12"/>
+                        </svg>
+                    </div>
+                    <h3>InsightStream</h3>
+                    <p>Real-time data analytics platform that turns your data into a stream of actionable insights with predictive capabilities.</p>
+                    <a href="products.html" class="btn btn-outline mt-3">Learn More</a>
+                </div>
+
+                <div class="feature-card scroll-animate">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="10" rx="2"/>
+                            <circle cx="12" cy="5" r="2"/>
+                            <path d="M12 7v4"/>
+                            <line x1="8" y1="16" x2="8" y2="16"/>
+                            <line x1="16" y1="16" x2="16" y2="16"/>
+                        </svg>
+                    </div>
+                    <h3>AutomateR</h3>
+                    <p>No-code platform for building and deploying enterprise-grade automation workflows that integrate seamlessly with your systems.</p>
+                    <a href="products.html" class="btn btn-outline mt-3">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Statistics -->
+    <section class="bg-alt">
+        <div class="container">
+            <h2 class="section-title">Proven Results</h2>
+            <div class="stats">
+                <div class="stat-item scroll-animate">
+                    <span class="stat-number" data-target="40" data-suffix="%">0%</span>
+                    <p class="stat-label">Average Increase in<br>Operational Efficiency</p>
+                </div>
+                <div class="stat-item scroll-animate">
+                    <span class="stat-number" data-target="60" data-suffix="%">0%</span>
+                    <p class="stat-label">Reduction in Manual<br>Data Entry Errors</p>
+                </div>
+                <div class="stat-item scroll-animate">
+                    <span class="stat-number" data-target="95" data-suffix="%">0%</span>
+                    <p class="stat-label">Accuracy in Document<br>Anomaly Detection</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="bg-white">
+        <div class="container">
+            <div class="comparison-section scroll-animate">
+                <div class="comparison-grid">
+                    <div>
+                        <h2>Comparative Impact of AI Acceleration</h2>
+                        <p>See how augmenting core operations with machine intelligence streamlines throughput, boosts accuracy, and frees teams to focus on strategy instead of repetitive tasks.</p>
+                        <ul class="comparison-list">
+                            <li><strong>Manual process</strong> <span>72 hrs per roll-out</span></li>
+                            <li><strong>AI-assisted orchestration</strong> <span>18 hrs per roll-out</span></li>
+                            <li><strong>Quality drift</strong> <span>↓ 68% incidents</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="metric-bar">
+                            <div class="metric-label">
+                                <strong>Manual workflow</strong>
+                                <span>72 hrs</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" data-width="45%"></div>
+                            </div>
+                        </div>
+                        <div class="metric-bar">
+                            <div class="metric-label">
+                                <strong>AI-orchestrated delivery</strong>
+                                <span>18 hrs</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" data-width="82%"></div>
+                            </div>
+                        </div>
+                        <div class="metric-bar">
+                            <div class="metric-label">
+                                <strong>Rework cycles</strong>
+                                <span>3 iterations</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" data-width="58%"></div>
+                            </div>
+                        </div>
+                        <div class="comparison-note">
+                            AI acceleration trims delivery cycles by up to 75% while sustaining quality and reducing operational overhead.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-dark">
+        <div class="container text-center">
+            <h2 class="mb-4">Ready to Transform Your Business?</h2>
+            <p class="lead mb-5">Join leading enterprises in leveraging autonomous software systems to drive efficiency, innovation, and growth.</p>
+            <div class="hero-actions">
+                <a href="contact.html" class="btn btn-primary btn-lg">Schedule a Demo</a>
+                <a href="about.html" class="btn btn-outline btn-lg">Learn More</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="footer-heading">Company</h5>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h5>Company</h5>
                     <ul class="footer-links">
                         <li><a href="about.html">About</a></li>
                         <li><a href="about.html">Culture & Team</a></li>
@@ -205,16 +314,26 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="footer-heading">Solutions</h5>
+                <div class="footer-section">
+                    <h5>Solutions</h5>
                     <ul class="footer-links">
-                        <li><a href="products.html">KompareDocs</a></li>
-                        <li><a href="products.html">Automation Platform</a></li>
+                        <li><a href="products.html">Komparedocs</a></li>
+                        <li><a href="products.html">InsightStream</a></li>
+                        <li><a href="products.html">AutomateR Platform</a></li>
                         <li><a href="industries.html">Advisory & Enablement</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="footer-heading">Resources</h5>
+                <div class="footer-section">
+                    <h5>Industries</h5>
+                    <ul class="footer-links">
+                        <li><a href="industries.html">Automotive</a></li>
+                        <li><a href="industries.html">Healthcare</a></li>
+                        <li><a href="industries.html">Finance</a></li>
+                        <li><a href="industries.html">Logistics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Resources</h5>
                     <ul class="footer-links">
                         <li><a href="privacy.html">Privacy Policy</a></li>
                         <li><a href="terms.html">Terms & Conditions</a></li>
@@ -222,15 +341,13 @@
                     </ul>
                 </div>
             </div>
-            <hr class="my-4" style="border-color: var(--border-color);">
-            <p class="text-center text-secondary">&copy; 2025 YARNA AB. All Rights Reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 YARNA AB. All Rights Reserved. Intelligence in every Automation™</p>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/icons.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

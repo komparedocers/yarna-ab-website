@@ -3,134 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - YARNA AB</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="description" content="Contact YARNA AB - Get in touch with our team">
+    <title>Contact Us | YARNA AB - Intelligence in every Automation™</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- Header -->
-    <header class="p-3 bg-white fixed-top header-light">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none logo-link">
-            <span class="logo-wordmark">YARNA AB</span>
-          </a>
-
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="index.html" class="nav-link px-2">Home</a></li>
-            <li><a href="about.html" class="nav-link px-2">About</a></li>
-            <li><a href="products.html" class="nav-link px-2">Products</a></li>
-            <li><a href="industries.html" class="nav-link px-2">Industries</a></li>
-            <li><a href="investors.html" class="nav-link px-2">Investors</a></li>
-          </ul>
-
-          <div class="text-end">
-            <a href="contact.html" class="btn btn-primary me-2">Contact Us</a>
-          </div>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M16 2L4 8v8c0 7.5 5.2 14.5 12 16 6.8-1.5 12-8.5 12-16V8L16 2zm0 2.5l10 5v6.5c0 6.5-4.5 12.5-10 14-5.5-1.5-10-7.5-10-14V9.5l10-5zM16 8l-6 4v4c0 3.3 2.7 6 6 6s6-2.7 6-6v-4l-6-4z"/>
+                    </svg>
+                </div>
+                YARNA AB
+            </a>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="products.html" class="nav-link">Products</a></li>
+                    <li><a href="industries.html" class="nav-link">Industries</a></li>
+                    <li><a href="investors.html" class="nav-link">Investors</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </nav>
         </div>
-      </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Page Header -->
-        <section class="hero text-center">
-            <div id="particles-js"></div>
-            <div class="container">
-                <div data-aos="fade-up">
-                    <h1 class="display-4 fw-bold">Get In Touch</h1>
-                    <p class="lead my-4">We'd love to hear from you. Whether you have a question about our products, services, or anything else, our team is ready to answer all your questions.</p>
+    <section class="hero">
+        <div class="particles"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Get In Touch</h1>
+                <p class="tagline">Intelligence in every Automation™</p>
+                <p class="lead">We'd love to hear from you. Whether you have a question about our products, services, or anything else, our team is ready to answer all your questions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="container">
+            <div class="comparison-grid">
+                <div class="scroll-animate">
+                    <h2 class="mb-4">Send us a Message</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-input" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-input" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-input" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-textarea" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-full">Submit</button>
+                    </form>
+                </div>
+
+                <div class="scroll-animate">
+                    <h2 class="mb-4">Contact Information</h2>
+                    <div class="card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <h4>Address</h4>
+                        <p>YARNA AB<br>Drottninggatan 1<br>111 51 Stockholm, Sweden</p>
+                    </div>
+
+                    <div class="card mt-4">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:contact@yarna.ab">contact@yarna.ab</a></p>
+                    </div>
+
+                    <div class="card mt-4">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <h4>Phone</h4>
+                        <p>+46 8 123 456 79</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Form and Details -->
-        <section class="py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6" data-aos="fade-right">
-                        <h3 class="mb-4">Send us a Message</h3>
-                        <form>
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="name" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="subject" class="form-label">Subject</label>
-                                <input type="text" class="form-control" id="subject" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
+    <section class="bg-alt">
+        <div class="container">
+            <div class="comparison-section scroll-animate">
+                <div class="comparison-grid">
+                    <div>
+                        <h2>Support Velocity Powered by AI</h2>
+                        <p>AI-guided support blends automated triage with human expertise, delivering faster, more personalized interactions for every inquiry.</p>
+                        <ul class="comparison-list">
+                            <li><strong>Average manual response</strong> <span>14 hrs to first reply</span></li>
+                            <li><strong>AI-prioritized response</strong> <span>2 hrs to first reply</span></li>
+                            <li><strong>Resolution satisfaction</strong> <span>↑ 32% CSAT</span></li>
+                        </ul>
                     </div>
-                    <div class="col-lg-5 offset-lg-1" data-aos="fade-left">
-                        <h3 class="mb-4">Contact Information</h3>
-                        <p><strong>Address:</strong><br>YARNA AB<br>Drottninggatan 1<br>111 51 Stockholm, Sweden</p>
-                        <p><strong>Email:</strong><br><a href="mailto:contact@yarna.ab">contact@yarna.ab</a></p>
-                        <p><strong>Phone:</strong><br>+46 8 123 456 79</p>
-                        <hr>
-                        <div class="ratio ratio-16x9">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035.233131926426!2d18.068923!3d59.329323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f77e3f3f3f3f3%3A0x465f77e3f3f3f3f3!2sStockholm%2C%20Sweden!5e0!3m2!1sen!2sus!4v1678886400000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div>
+                        <div class="metric-bar">
+                            <div class="metric-label">
+                                <strong>Manual queue</strong>
+                                <span>14 hrs</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" data-width="46%"></div>
+                            </div>
+                        </div>
+                        <div class="metric-bar">
+                            <div class="metric-label">
+                                <strong>AI assist</strong>
+                                <span>2 hrs</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="metric-bar">
+                            <div class="metric-label">
+                                <strong>Follow-up loops</strong>
+                                <span>1.3 per ticket</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar-fill" data-width="68%"></div>
+                            </div>
+                        </div>
+                        <div class="comparison-note">
+                            AI triage ensures teams focus on nuanced issues while customers get help instantly.
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-
-        <section class="py-5 light-section">
-            <div class="container">
-                <div class="ai-comparison-section" data-aos="fade-up">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-lg-5 ai-comparison-copy">
-                            <h2>Support Velocity Powered by AI</h2>
-                            <p>AI-guided support blends automated triage with human expertise, delivering faster, more personalized interactions for every inquiry.</p>
-                            <ul class="comparison-list">
-                                <li><strong>Average manual response</strong><span>14 hrs to first reply</span></li>
-                                <li><strong>AI-prioritized response</strong><span>2 hrs to first reply</span></li>
-                                <li><strong>Resolution satisfaction</strong><span>↑ 32% CSAT</span></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-7">
-                            <div class="comparison-visual">
-                                <div class="metric-track">
-                                    <div class="metric-heading"><span>Manual queue</span><span>14 hrs</span></div>
-                                    <div class="comparison-bar" style="--target:0.46;"><span></span></div>
-                                </div>
-                                <div class="metric-track">
-                                    <div class="metric-heading"><span>AI assist</span><span>2 hrs</span></div>
-                                    <div class="comparison-bar" style="--target:0.90;"><span></span></div>
-                                </div>
-                                <div class="metric-track">
-                                    <div class="metric-heading"><span>Follow-up loops</span><span>1.3 per ticket</span></div>
-                                    <div class="comparison-bar" style="--target:0.68;"><span></span></div>
-                                </div>
-                                <div class="comparison-delta">AI triage ensures teams focus on nuanced issues while customers get help instantly.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="footer-heading">Company</h5>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h5>Company</h5>
                     <ul class="footer-links">
                         <li><a href="about.html">About</a></li>
                         <li><a href="about.html">Culture & Team</a></li>
@@ -138,16 +173,26 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                    <h5 class="footer-heading">Solutions</h5>
+                <div class="footer-section">
+                    <h5>Solutions</h5>
                     <ul class="footer-links">
-                        <li><a href="products.html">KompareDocs</a></li>
-                        <li><a href="products.html">Automation Platform</a></li>
+                        <li><a href="products.html">Komparedocs</a></li>
+                        <li><a href="products.html">InsightStream</a></li>
+                        <li><a href="products.html">AutomateR Platform</a></li>
                         <li><a href="industries.html">Advisory & Enablement</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="footer-heading">Resources</h5>
+                <div class="footer-section">
+                    <h5>Industries</h5>
+                    <ul class="footer-links">
+                        <li><a href="industries.html">Automotive</a></li>
+                        <li><a href="industries.html">Healthcare</a></li>
+                        <li><a href="industries.html">Finance</a></li>
+                        <li><a href="industries.html">Logistics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Resources</h5>
                     <ul class="footer-links">
                         <li><a href="privacy.html">Privacy Policy</a></li>
                         <li><a href="terms.html">Terms & Conditions</a></li>
@@ -155,15 +200,13 @@
                     </ul>
                 </div>
             </div>
-            <hr class="my-4" style="border-color: var(--border-color);">
-            <p class="text-center text-secondary">&copy; 2025 YARNA AB. All Rights Reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 YARNA AB. All Rights Reserved. Intelligence in every Automation™</p>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/icons.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
