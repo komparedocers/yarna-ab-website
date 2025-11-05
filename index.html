@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YARNA AB - Artificial Intelligence Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="p-3 bg-white fixed-top header-light">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none logo-link">
+            <span class="logo-wordmark">YARNA AB</span>
+          </a>
+
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="index.html" class="nav-link px-2 active-link">Home</a></li>
+            <li><a href="about.html" class="nav-link px-2">About</a></li>
+            <li><a href="products.html" class="nav-link px-2">Products</a></li>
+            <li><a href="industries.html" class="nav-link px-2">Industries</a></li>
+            <li><a href="investors.html" class="nav-link px-2">Investors</a></li>
+          </ul>
+
+          <div class="text-end">
+            <a href="contact.html" class="btn btn-outline-light me-2">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero text-center">
+            <div id="particles-js"></div>
+            <div class="container">
+                <div data-aos="fade-up">
+                    <h1 class="display-3 fw-bold">Engineering the Future, Intelligently</h1>
+                    <p class="lead my-4">We build cutting-edge AI products that solve complex business problems through automation and data-driven insights.</p>
+                    <a href="about.html" class="btn btn-primary btn-lg">Discover Our Advantage</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Our Expertise</h2>
+                <div class="row g-4">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="product-card h-100">
+                            <div class="icon"><i class="bi bi-cpu"></i></div>
+                            <div>
+                                <h5>AI & Machine Learning</h5>
+                                <p class="text-secondary mb-0">Developing intelligent systems that learn and adapt to your business needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="product-card h-100">
+                            <div class="icon"><i class="bi bi-gear-wide-connected"></i></div>
+                            <div>
+                                <h5>Process Automation</h5>
+                                <p class="text-secondary mb-0">Streamlining your operations with smart automation solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="product-card h-100">
+                            <div class="icon"><i class="bi bi-bar-chart-line"></i></div>
+                            <div>
+                                <h5>Data Analytics</h5>
+                                <p class="text-secondary mb-0">Turning your data into actionable insights for better decision-making.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI ROI Calculator -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="roi-calculator p-5" data-aos="fade-up">
+                    <h2 class="text-center mb-4">Calculate Your AI Advantage</h2>
+                    <p class="text-center text-secondary mb-5">See the tangible impact of AI-driven automation. Adjust the sliders to estimate your potential savings.</p>
+                    <div class="row align-items-center">
+                        <div class="col-lg-7">
+                            <div class="mb-4">
+                                <label for="employees" class="form-label">Number of Employees on Repetitive Tasks: <span id="employees-value" class="range-value">10</span></label>
+                                <input type="range" class="form-range" id="employees" min="1" max="100" value="10">
+                            </div>
+                            <div class="mb-4">
+                                <label for="hours" class="form-label">Hours/Week Spent per Employee: <span id="hours-value" class="range-value">8</span></label>
+                                <input type="range" class="form-range" id="hours" min="1" max="40" value="8">
+                            </div>
+                            <div class="mb-4">
+                                <label for="cost" class="form-label">Average Hourly Cost ($): <span id="cost-value" class="range-value">30</span></label>
+                                <input type="range" class="form-range" id="cost" min="10" max="200" value="30">
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <p class="text-center text-secondary mb-2">Estimated Annual Savings</p>
+                            <div id="savings-display">$0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Slider -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Our Products</h2>
+                <div class="swiper product-swiper" data-aos="fade-up">
+                    <div class="swiper-wrapper pb-5">
+                        <div class="swiper-slide">
+                            <div class="product-card h-100">
+                                <div class="icon"><i class="bi bi-files"></i></div>
+                                <div>
+                                    <h5>Komparedocs</h5>
+                                    <p class="text-secondary mb-0">AI-powered tool for intelligent document comparison.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card h-100">
+                                <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
+                                <div>
+                                    <h5>InsightStream</h5>
+                                    <p class="text-secondary mb-0">Real-time data analytics platform for enterprise.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product-card h-100">
+                                <div class="icon"><i class="bi bi-robot"></i></div>
+                                <div>
+                                    <h5>AutomateR</h5>
+                                    <p class="text-secondary mb-0">No-code platform for building automation workflows.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="py-5 light-section">
+            <div class="container">
+                <div class="ai-comparison-section" data-aos="fade-up">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-5 ai-comparison-copy">
+                            <h2>Comparative Impact of AI Acceleration</h2>
+                            <p>See how augmenting core operations with machine intelligence streamlines throughput, boosts accuracy, and frees teams to focus on strategy instead of repetitive tasks.</p>
+                            <ul class="comparison-list">
+                                <li><strong>Manual process</strong><span>72 hrs per roll-out</span></li>
+                                <li><strong>AI-assisted orchestration</strong><span>18 hrs per roll-out</span></li>
+                                <li><strong>Quality drift</strong><span>↓ 68% incidents</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="comparison-visual">
+                                <div class="metric-track">
+                                    <div class="metric-heading"><span>Manual workflow</span><span>72 hrs</span></div>
+                                    <div class="comparison-bar" style="--target:0.45;"><span></span></div>
+                                </div>
+                                <div class="metric-track">
+                                    <div class="metric-heading"><span>AI-orchestrated delivery</span><span>18 hrs</span></div>
+                                    <div class="comparison-bar" style="--target:0.82;"><span></span></div>
+                                </div>
+                                <div class="metric-track">
+                                    <div class="metric-heading"><span>Rework cycles</span><span>3 iterations</span></div>
+                                    <div class="comparison-bar" style="--target:0.58;"><span></span></div>
+                                </div>
+                                <div class="comparison-delta">AI acceleration trims delivery cycles by up to 75% while sustaining quality.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="about.html">Culture & Team</a></li>
+                        <li><a href="investors.html">Investors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Solutions</h5>
+                    <ul class="footer-links">
+                        <li><a href="products.html">KompareDocs</a></li>
+                        <li><a href="products.html">Automation Platform</a></li>
+                        <li><a href="industries.html">Advisory & Enablement</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-heading">Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: var(--border-color);">
+            <p class="text-center text-secondary">&copy; 2025 YARNA AB. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
